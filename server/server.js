@@ -13,8 +13,6 @@ const app = express()
 app.use(cors())
 
 // Middleware
-
-app.use("/api/clerk", bodyParser.raw({ type: "*/*" })); // For webhook verification
 app.use(express.json())
 app.use(clerkMiddleware())
 
